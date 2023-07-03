@@ -8,10 +8,8 @@ export const width = num =>
 export const height = num =>
   PixelRatio.roundToNearestPixel(MYHEIGHT * (num / 100));
 
-export const trendyColor = {
-  primay: '#E6E7EE',
-  textColor: '#404358',
-  blueColor: '#8f9ff8',
-  blueText: '#7593FF',
-  greenText: '#48FFDE',
+export const color = {
+  __bluetext: "#8F9FF8",
+  __blacktext: "#404358",
+  __grey: "#E6E7EE",
 };

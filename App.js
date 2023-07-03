@@ -5,6 +5,8 @@ import {BottomNavigation} from './src/Navigation/tab';
 // import {PrivacyScreenNavigator} from './src/Navigation/screen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ToastGlobal from './src/Components/Toast';
+import Login from './src/Screen/Login';
+import WallerImport from './src/Screen/WallerImport';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -19,7 +21,9 @@ export default function App() {
                   {/*    name="PrivacyNavigation"*/}
                   {/*    component={PrivacyScreenNavigator}*/}
                   {/*/>*/}
-                  <Stack.Screen name="BottomNavigation" component={BottomNavigation} />
+                  {/* <Stack.Screen name="BottomNavigation" component={BottomNavigation} /> */}
+                  <Stack.Screen name='Login' component={Login}/>
+                  <Stack.Screen name='WallerImport' component={WallerImport}/>
               </Stack.Navigator>
           </NavigationContainer>
           <ToastGlobal />

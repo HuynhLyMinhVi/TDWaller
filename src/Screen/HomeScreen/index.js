@@ -14,7 +14,6 @@ export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>Home here</Text>
-      <StatusBar style="auto" />
     </View>
   );
 }
