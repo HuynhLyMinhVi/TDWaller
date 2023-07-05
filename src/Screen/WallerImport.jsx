@@ -194,7 +194,11 @@ const WallerImport = () => {
         </ImportConten>
       </ExternalShadow>
       {/* Button Import */}
-      <ButtonImport>
+      <ButtonImport
+        onPress={() => {
+          navigation.navigate("BottomNavigation");
+        }}
+      >
         <ExternalShadow>
           <StyleButtonImport>
             <StyleButtonImportText>Import</StyleButtonImportText>

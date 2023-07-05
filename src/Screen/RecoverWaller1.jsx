@@ -1,11 +1,10 @@
-import { View, Text, TouchableOpacity, Pressable, Image } from "react-native";
+import { View, Text, TouchableOpacity, Pressable } from "react-native";
 import React from "react";
 import { styled } from "styled-components/native";
 import ButtonToBack from "../Components/ButtonToBack/ButtonToBack";
 import { useNavigation } from "@react-navigation/native";
-import { ExternalShadow, InternalShadow } from "../Components/BoxShadow";
+import { ExternalShadow } from "../Components/BoxShadow";
 import { color } from "../assets/styles/common";
-import images from "../assets/images";
 
 //=================== Styled Components ==================
 const StyleSafeAreaView = styled.SafeAreaView`
@@ -18,7 +17,7 @@ const HearderButtonBack = styled.View`
   margin-bottom: 30px;
 `;
 const Container = styled.View`
-  margin: 45px 21px 0;
+  margin: 40px 21px 0;
   align-items: center;
 `;
 const TextH1 = styled.Text`
@@ -34,39 +33,7 @@ const TextP = styled.Text`
   line-height: 20px;
   text-align: center;
 `;
-const RandomPhrase = styled.View`
-  margin-top: 35px;
-`;
-const RandomText = styled.Text`
-  color: ${color.__blacktext};
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
-  padding: 0 5px;
-`;
-const ButtonCopy = styled.TouchableOpacity``;
-const ButtonCopyText = styled.Text`
-  color: ${color.__blacktext};
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  margin-top: 30px;
-`;
-const Warning = styled.View`
-  align-items: center;
-  margin-top: 100px;
-`;
-const WarningImage = styled.Image`
-  width: 50px;
-  height: 40px;
-`;
-const WarningText = styled.Text`
-  text-align: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20;
-  color: ${color.__bluetext};
-`;
+
 const ButtonNext = styled.View`
   margin-top: 50px;
   width: 370px;
@@ -79,7 +46,7 @@ const ButtonNextText = styled.Text`
   text-align: center;
 `;
 // ======================= END =========================
-const RecoverWaller = () => {
+const RecoverWaller1 = () => {
   const navigation = useNavigation();
   const hendelToBack = () => {
     navigation.goBack();
@@ -94,44 +61,18 @@ const RecoverWaller = () => {
           </ExternalShadow>
         </TouchableOpacity>
       </HearderButtonBack>
-      {/* Phrase recover your wallet. */}
       <Container>
         <TextH1>Phrase recover your wallet</TextH1>
         <TextP>
-          Write down or copy these words in the correct order and save them in a
-          safe place.
+          Tap the words to put them side by side in the correct order.
         </TextP>
-        {/* Random phrase */}
-        <RandomPhrase>
-          <InternalShadow
-            style={{
-              height: 30,
-              width: "auto",
-              backgroundColor: `${color.__grey}`,
-            }}
-          >
-            <RandomText>hell</RandomText>
-          </InternalShadow>
-        </RandomPhrase>
         
-        {/* Button Copy */}
-        <ButtonCopy>
-          <ButtonCopyText>Copy</ButtonCopyText>
-        </ButtonCopy>
-        {/* Icon Warning */}
-        <Warning>
-          <WarningImage source={images.iconWarning} />
-          <WarningText>
-            Never share recovery phrases with anyone, keep them safe and
-            confidential!
-          </WarningText>
-        </Warning>
         {/* Button Next */}
         <ButtonNext>
           <ExternalShadow>
             <Pressable
               onPress={() => {
-                navigation.navigate("RecoverWaller1");
+                navigation.navigate("BottomNavigation");
               }}
             >
               <ButtonNextText>Next</ButtonNextText>
@@ -143,4 +84,4 @@ const RecoverWaller = () => {
   );
 };
 
-export default RecoverWaller;
+export default RecoverWaller1;
