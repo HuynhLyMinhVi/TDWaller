@@ -3,7 +3,7 @@ import React from "react";
 import { styled } from "styled-components/native";
 import ButtonToBack from "../Components/ButtonToBack/ButtonToBack";
 import { useNavigation } from "@react-navigation/native";
-import { ExternalShadow } from "../Components/BoxShadow";
+import { ExternalShadow, InternalShadow } from "../Components/BoxShadow";
 import { color } from "../assets/styles/common";
 
 //=================== Styled Components ==================
@@ -35,6 +35,13 @@ const TextP = styled.Text`
 `;
 const RandomPhrase = styled.View`
   margin-top: 35px;
+`;
+const RandomText = styled.Text`
+  color: ${color.__blacktext};
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0 5px;
 `;
 const ButtonCopy = styled.TouchableOpacity``;
 const ButtonCopyText = styled.Text`
@@ -70,13 +77,20 @@ const RecoverWaller = () => {
         </TextP>
         {/* Random phrase */}
         <RandomPhrase>
-          <Text>hello</Text>
+          <InternalShadow
+            style={{
+              height: 30,
+              width: "auto",
+              backgroundColor: `${color.__grey}`,
+            }}
+          >
+            <RandomText>hell</RandomText>
+          </InternalShadow>
         </RandomPhrase>
         {/* Button Copy */}
         <ButtonCopy>
           <ButtonCopyText>Copy</ButtonCopyText>
         </ButtonCopy>
-        
       </Container>
     </StyleSafeAreaView>
   );
