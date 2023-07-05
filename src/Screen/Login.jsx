@@ -13,7 +13,7 @@ const StyleSafeAreaView = styled.SafeAreaView`
 const ButtonWaller = styled.View`
   margin-top: 60px;
   align-items: center;
-  gap: 29;
+  gap: 29px;
 `;
 const ButtonNewWaller = styled.View`
   background-color: ${color.__grey};
@@ -35,15 +35,18 @@ const Login = () => {
   const handleHaveWalletPress = () => {
     navigation.navigate("WallerImport");
   };
+  const handleBackupWaller = () => {
+    navigation.navigate("BackupWaller");
+  };
   return (
     <StyleSafeAreaView>
       {/* Carosel */}
       <LoginCarousel />
       {/* Button */}
       <ButtonWaller>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleBackupWaller}>
           <ExternalShadow>
-            <ButtonNewWaller>
+            <ButtonNewWaller >
               <TextNewWaller>Create a new wallet</TextNewWaller>
             </ButtonNewWaller>
           </ExternalShadow>
