@@ -45,6 +45,11 @@ const CaroselHome = styled.View`
   width: auto;
   height: 190px;
 `;
+const Line = styled.View`
+  width: 100%;
+  background-color: ${color.__colorLine};
+  height: 2px;
+`;
 const Button = styled.View``;
 // ======================= END =========================
 export default function HomeScreen({ navigation }) {
@@ -76,8 +81,19 @@ export default function HomeScreen({ navigation }) {
       </ExternalShadow>
       {/* Button Send Receive Buy */}
       <Button>
-        
+        {/* Send */}
+        {/* Receive */}
+        {/* Buy */}
       </Button>
+      <Line
+        style={[
+          {
+            marginTop: 10,
+            opacity: 0.6,
+          },
+        ]}
+      />
+      
     </StyleSafeAreaView>
   );
 }

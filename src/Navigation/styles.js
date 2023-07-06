@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   wrap: {
-    backgroundColor: '#E6E7EE',
+    // backgroundColor: '#E6E7EE',
     borderRadius: 10,
     height: 35,
     width: 35,
@@ -17,8 +17,8 @@ export default StyleSheet.create({
   },
 
   innnerShadow: {
-    width: 55,
-    height: 55,
+    width: 40,
+    height: 40,
     alignItem: 'center',
     justifyContent: 'center',
   },

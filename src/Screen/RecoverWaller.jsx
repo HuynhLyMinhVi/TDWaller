@@ -86,12 +86,14 @@ const RecoverWaller = () => {
     navigation.goBack();
   };
   // const generatePhrase = () => {
-  //   const wallet = ethers.Wallet.createRandom();
+  //   console.log("running generate phrase");
+
+  //   const wallet = ethers.Wallet.createRandom()
   //   console.log("wallet", wallet);
-  //   console.log("fffff");
+  //   // console.log("fffff");
   // };
   // generatePhrase();
-  // console.log("generatePhrase", generatePhrase());
+  // console.log("generatePhrase", generatePhrase);
   return (
     <StyleSafeAreaView>
       {/* Button To Back */}

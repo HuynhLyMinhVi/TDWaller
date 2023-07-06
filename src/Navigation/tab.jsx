@@ -8,7 +8,7 @@ import {
 import styles from './styles';
 import {ExternalShadow, InternalShadow} from '../Components/BoxShadow';
 import {trendyColor, height, width} from '../assets/styles/common.js';
-import images, {iconHome} from '../assets/images';
+import images from '../assets/images';
 const Tab = createBottomTabNavigator();
 
 export function BottomNavigation() {
@@ -18,8 +18,8 @@ export function BottomNavigation() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: 'rgba(230, 231, 238, 0.9)',
-          height: height(9),
+          backgroundColor: 'rgba(230, 231, 238, 0.8)',
+          height: height(12),
         },
         tabBarShowLabel: false,
       }}>
@@ -48,7 +48,31 @@ export function BottomNavigation() {
         name="Home"
         component={HomeScreenNavigator}
       />
-    
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({focused}) =>
+            focused ? (
+              <ExternalShadow
+                style={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                padding={0}>
+                <InternalShadow style={styles.innnerShadow}>
+                    <Image source={images.iconCompass} style={styles.contentImage} />
+                </InternalShadow>
+              </ExternalShadow>
+            ) : (
+              <ExternalShadow>
+                <View style={styles.wrap}>
+                    <Image source={images.iconCompass} style={styles.contentImage} />
+                </View>
+              </ExternalShadow>
+            ),
+        }}
+        name="s"
+        component={HomeScreenNavigator}
+      />
     </Tab.Navigator>
   );
 }

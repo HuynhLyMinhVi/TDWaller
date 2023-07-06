@@ -20,7 +20,7 @@ const StyleImage = styled.Image`
 `;
 const StyleCarouselText = styled.Text`
   color: ${color.__bluetext};
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 30px;
   margin-top: 15px;
