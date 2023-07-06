@@ -6,6 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import { ExternalShadow, InternalShadow } from "../Components/BoxShadow";
 import { color } from "../assets/styles/common";
 import images from "../assets/images";
+import { ethers, wordlists } from "ethers";
 
 //=================== Styled Components ==================
 const StyleSafeAreaView = styled.SafeAreaView`
@@ -84,6 +85,13 @@ const RecoverWaller = () => {
   const hendelToBack = () => {
     navigation.goBack();
   };
+  // const generatePhrase = () => {
+  //   const wallet = ethers.Wallet.createRandom();
+  //   console.log("wallet", wallet);
+  //   console.log("fffff");
+  // };
+  // generatePhrase();
+  // console.log("generatePhrase", generatePhrase());
   return (
     <StyleSafeAreaView>
       {/* Button To Back */}
@@ -113,7 +121,7 @@ const RecoverWaller = () => {
             <RandomText>hell</RandomText>
           </InternalShadow>
         </RandomPhrase>
-        
+
         {/* Button Copy */}
         <ButtonCopy>
           <ButtonCopyText>Copy</ButtonCopyText>

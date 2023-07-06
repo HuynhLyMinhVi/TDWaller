@@ -8,7 +8,7 @@ import {
 import styles from './styles';
 import {ExternalShadow, InternalShadow} from '../Components/BoxShadow';
 import {trendyColor, height, width} from '../assets/styles/common.js';
-import {iconHome} from '../assets/images';
+import images, {iconHome} from '../assets/images';
 const Tab = createBottomTabNavigator();
 
 export function BottomNavigation() {
@@ -34,13 +34,13 @@ export function BottomNavigation() {
                 }}
                 padding={0}>
                 <InternalShadow style={styles.innnerShadow}>
-                  <Image source={iconHome} style={styles.contentImage} />
+                  <Image source={images.iconHome} style={styles.contentImage} />
                 </InternalShadow>
               </ExternalShadow>
             ) : (
               <ExternalShadow>
                 <View style={styles.wrap}>
-                    <Image source={iconHome} style={styles.contentImage} />
+                    <Image source={images.iconHome} style={styles.contentImage} />
                 </View>
               </ExternalShadow>
             ),
@@ -48,31 +48,7 @@ export function BottomNavigation() {
         name="Home"
         component={HomeScreenNavigator}
       />
-      <Tab.Screen
-        options={{
-          tabBarIcon: ({focused}) =>
-            focused ? (
-              <ExternalShadow
-                style={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                padding={0}>
-                <InternalShadow style={styles.innnerShadow}>
-                    <Image source={iconHome} style={styles.contentImage} />
-                </InternalShadow>
-              </ExternalShadow>
-            ) : (
-              <ExternalShadow>
-                <View style={styles.wrap}>
-                    <Image source={iconHome} style={styles.contentImage} />
-                </View>
-              </ExternalShadow>
-            ),
-        }}
-        name="WalletDetail"
-        component={HomeScreenNavigator}
-      />
+    
     </Tab.Navigator>
   );
 }
