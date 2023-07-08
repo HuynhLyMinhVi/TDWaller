@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   wrap: {
@@ -6,26 +6,31 @@ export default StyleSheet.create({
     borderRadius: 10,
     height: 35,
     width: 35,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
+  
 
   image: {
-    resizeMode: 'cover',
-    width: '65%',
-    height: '65%',
+    resizeMode: "cover",
+    width: "65%",
+    height: "65%",
   },
 
   innnerShadow: {
     width: 40,
     height: 40,
-    alignItem: 'center',
-    justifyContent: 'center',
+    alignItem: "center",
+    justifyContent: "center",
   },
 
   contentImage: {
-    resizeMode: 'contain',
-    width: '100%',
-    height: '50%',
+    resizeMode: "contain",
+    width: "100%",
+    height: "50%",
+  },
+  contentImages: {
+    width: 32,
+    height: 32,
   },
 });

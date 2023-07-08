@@ -1,14 +1,12 @@
-import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {View, Image} from 'react-native';
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { View, Image } from "react-native";
 
-import {
-  HomeScreenNavigator,
-} from './screen';
-import styles from './styles';
-import {ExternalShadow, InternalShadow} from '../Components/BoxShadow';
-import {trendyColor, height, width} from '../assets/styles/common.js';
-import images from '../assets/images';
+import { HomeScreenNavigator } from "./screen";
+import styles from "./styles";
+import { ExternalShadow, InternalShadow } from "../Components/BoxShadow";
+import { trendyColor, height, width } from "../assets/styles/common.js";
+import images from "../assets/images";
 const Tab = createBottomTabNavigator();
 
 export function BottomNavigation() {
@@ -18,29 +16,34 @@ export function BottomNavigation() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: 'rgba(230, 231, 238, 0.8)',
+          backgroundColor: "rgba(230, 231, 238, 0.8)",
           height: height(12),
         },
         tabBarShowLabel: false,
-      }}>
+      }}
+    >
       <Tab.Screen
         options={{
-          tabBarIcon: ({focused}) =>
+          tabBarIcon: ({ focused }) =>
             focused ? (
               <ExternalShadow
                 style={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-                padding={0}>
-                <InternalShadow style={styles.innnerShadow}>
-                  <Image source={images.iconHome} style={styles.contentImage} />
-                </InternalShadow>
+                padding={0}
+              >
+                <View style={styles.wrap}>
+                  <Image
+                    source={images.iconHome}
+                    style={styles.contentImages}
+                  />
+                </View>
               </ExternalShadow>
             ) : (
               <ExternalShadow>
                 <View style={styles.wrap}>
-                    <Image source={images.iconHome} style={styles.contentImage} />
+                  <Image source={images.iconHome} style={styles.contentImage} />
                 </View>
               </ExternalShadow>
             ),
@@ -50,22 +53,29 @@ export function BottomNavigation() {
       />
       <Tab.Screen
         options={{
-          tabBarIcon: ({focused}) =>
+          tabBarIcon: ({ focused }) =>
             focused ? (
               <ExternalShadow
                 style={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-                padding={0}>
-                <InternalShadow style={styles.innnerShadow}>
-                    <Image source={images.iconCompass} style={styles.contentImage} />
-                </InternalShadow>
+                padding={0}
+              >
+                <View style={styles.wrap}>
+                  <Image
+                    source={images.iconCompass}
+                    style={styles.contentImages}
+                  />
+                </View>
               </ExternalShadow>
             ) : (
               <ExternalShadow>
                 <View style={styles.wrap}>
-                    <Image source={images.iconCompass} style={styles.contentImage} />
+                  <Image
+                    source={images.iconCompass}
+                    style={styles.contentImage}
+                  />
                 </View>
               </ExternalShadow>
             ),
