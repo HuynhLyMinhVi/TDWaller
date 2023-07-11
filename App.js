@@ -5,24 +5,35 @@ import {BottomNavigation} from './src/Navigation/tab';
 // import {PrivacyScreenNavigator} from './src/Navigation/screen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ToastGlobal from './src/Components/Toast';
+import Login from './src/Screen/Login';
+import WallerImport from './src/Screen/WallerImport';
+import BackupWaller from './src/Screen/BackupWaller';
+import RecoverWaller from './src/Screen/RecoverWaller';
+import RecoverWaller1 from './src/Screen/RecoverWaller1';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-      <SafeAreaProvider>
-          <NavigationContainer>
-              <Stack.Navigator
-                  screenOptions={{
-                      headerShown: false,
-                  }}>
-                  {/*<Stack.Screen*/}
-                  {/*    name="PrivacyNavigation"*/}
-                  {/*    component={PrivacyScreenNavigator}*/}
-                  {/*/>*/}
-                  <Stack.Screen name="BottomNavigation" component={BottomNavigation} />
-              </Stack.Navigator>
-          </NavigationContainer>
-          <ToastGlobal />
-      </SafeAreaProvider>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          {/*<Stack.Screen*/}
+          {/*    name="PrivacyNavigation"*/}
+          {/*    component={PrivacyScreenNavigator}*/}
+          {/*/>*/}
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="WallerImport" component={WallerImport} />
+          <Stack.Screen name="BackupWaller" component={BackupWaller} />
+          <Stack.Screen name="RecoverWaller" component={RecoverWaller} />
+          <Stack.Screen name="RecoverWaller1" component={RecoverWaller1} />
+          <Stack.Screen name="BottomNavigation" component={BottomNavigation} />
+        </Stack.Navigator>
+      </NavigationContainer>
+      <ToastGlobal />
+    </SafeAreaProvider>
   );
 }

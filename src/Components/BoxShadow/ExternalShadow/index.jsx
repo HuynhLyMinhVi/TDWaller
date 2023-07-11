@@ -3,8 +3,8 @@ import React from 'react';
 import styles from './styles';
 const ExternalShadow = ({children, style, ...props}) => {
   return (
-    <View style={{...styles.topShadow, ...style}}>
-      <View style={[styles.bottomShadow, {...props}]}>{children}</View>
+    <View style={{...styles.topShadow}}>
+      <View style={[styles.bottomShadow]}>{children}</View>
     </View>
   );
 };
